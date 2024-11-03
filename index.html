@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/80486f6a92.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Jwellery Store</title>
+  </head>
+
+  <body>
+    <main>
+      <!-- Navbar Section -->
+      <nav class="container-md navbar navbar-expand-lg
+      bg-opacity-75 d-flex justify-content-between align-items-center py-3">
+       <a class="navbar-brand d-flex align-items-center col-md-4" href="#">
+         <img src="./images/logo.svg" alt="Logo" class="img-fluid" style="max-height: 50px" />
+       </a>
+     
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+     
+       <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav mx-auto d-flex flex-row">
+           <li class="nav-item mx-3">
+             <a class="nav-link text-black" href="#">Diamonds</a>
+           </li>
+           <li class="nav-item mx-3">
+             <a class="nav-link text-black font-weight-bold" href="#">Accessories</a>
+           </li>
+           <li class="nav-item mx-3">
+             <a class="nav-link text-black" href="#">Fine Jewelry</a>
+           </li>
+           <li class="nav-item mx-3">
+             <a class="nav-link text-black" href="#">Watches</a>
+           </li>
+         </ul>
+     
+         <div class="d-flex">
+           <a href="#" class="mx-2">
+             <i class="bi bi-search" style="font-size: 26px; color: black;"></i>
+           </a>
+           <a href="#" class="mx-2">
+             <i class="bi bi-heart" style="font-size: 26px; color: black;"></i>
+           </a>
+           <a href="#" class="mx-2">
+             <i class="bi bi-person-fill" style="font-size: 26px; color: black;"></i>
+           </a>
+         </div>
+       </div>
+     </nav>
+     
+      
+
+
+      <div class="d-flex justify-content-center align-items-center">
+        <h1 id="ring-title" class="display-1 text-center">Vintage Antique</h1>
+    </div>
+
+    <div class="container position-relative ring-container mt-5">
+        <div class="ring ring-left" onclick="showDetails('vintage')"><img src="./images/ring1.png" class="img-fluid" alt="Ring 1"></div>
+        <div class="ring ring-center" onclick="showDetails('hidden')"><img src="./images/ring2.png" class="img-fluid" alt="Ring 2"></div>
+        <div class="ring ring-right" onclick="showDetails('pave')"><img src="./images/ring3.png" class="img-fluid" alt="Ring 3"></div>
+    </div>
+
+    <div class="detail text-center" id="ring-details">
+        <div id="vintage" class="detail-item">
+            <h2 class="font-weight-bold">Vintage & Antique</h2>
+            <p class="text-muted mb-1">$4500</p>
+            <p class="text-muted small">Take 20% off for a limited time.<br />Use Code: LOVE20</p>
+        </div>
+        <div id="hidden" class="detail-item hidden">
+            <h2 class="font-weight-bold">Hidden Halo</h2>
+            <p class="text-muted mb-1">$4500</p>
+            <p class="text-muted small">Take 20% off for a limited time.<br />Use Code: LOVE20</p>
+        </div>
+        <div id="pave" class="detail-item hidden">
+            <h2 class="font-weight-bold">Pave</h2>
+            <p class="text-muted mb-1">$4500</p>
+            <p class="text-muted small">Take 20% off for a limited time.<br />Use Code: LOVE20</p>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <button class="btn btn-primary text-white">View Details</button>
+    </div>
+
+      <!-- Rings Collections -->
+      
+
+      <div class="bg-custom-orange">
+        <div class="container-cards">
+          <div class="row justify-content-center">
+            <!-- Card for each ring type -->
+            <div class="col-10 col-sm-6 col-md-4 col-lg-3 text-center mb-4">
+              <div
+                class="card border-0 overflow-hidden"
+                style="background-color: transparent"
+              >
+                <img
+                  src="./images/wedding-ring.png"
+                  class="card-img-top"
+                  alt="Wedding Rings"
+                />
+                <div class="card-footer bg-white py-3">
+                  <h5 class="fw-bold mb-1 text-color-black">Wedding Rings</h5>
+                  <p class="text-muted mb-0">Every diamond in our collection</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 col-sm-6 col-md-4 col-lg-3 text-center mb-4">
+              <div
+                class="card border-0 overflow-hidden"
+                style="background-color: transparent"
+              >
+                <img
+                  src="./images/engagement-ring.png"
+                  class="card-img-top"
+                  alt="Engagement Rings"
+                />
+                <div class="card-footer bg-white py-3">
+                  <h5 class="fw-bold mb-1 text-color-black">
+                    Engagement Rings
+                  </h5>
+                  <p class="text-muted mb-0">Every diamond in our collection</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 col-sm-6 col-md-4 col-lg-3 text-center mb-4">
+              <div
+                class="card border-0 overflow-hidden"
+                style="background-color: transparent"
+              >
+                <img
+                  src="./images/fine-jwellery.png"
+                  class="card-img-top"
+                  alt="Fine Jewelry"
+                />
+                <div class="card-footer bg-white py-3">
+                  <h5 class="fw-bold mb-1 text-color-black">Fine Jewelry</h5>
+                  <p class="text-muted mb-0">Every diamond in our collection</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-10 col-sm-6 col-md-4 col-lg-3 text-center mb-4">
+              <div
+                class="card border-0 overflow-hidden"
+                style="background-color: transparent"
+              >
+                <img
+                  src="./images/latest-ring.png"
+                  class="card-img-top"
+                  alt="Latest Rings"
+                />
+                <div class="card-footer bg-white py-3">
+                  <h5 class="fw-bold mb-1 text-color-black">Latest Rings</h5>
+                  <p class="text-muted mb-0">Every diamond in our collection</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diamonds Carousel -->
+      <div class="container text-center my-5">
+        <h3 class="fw-bold fs-3">Explore Loose Diamonds</h3>
+        <p class="text-muted fs-5">
+          Every diamond in our collection is selected for its superior cut,
+          symmetry, and shape.
+        </p>
+    </div>
+    
+    <!-- Carousel Container -->
+    <div class="owl-carousel">
+        <div class="item">
+            <img src="./images/oval.svg" alt="Round Diamond" class="img-fluid" />
+            <h3>Round</h3>
+            <p class="text-muted">Every diamond in our collection</p>
+        </div>
+        <div class="item">
+            <img src="./images/emrald-ring.svg" alt="Emerald Diamond" class="img-fluid" />
+            <h3>Emerald</h3>
+            <p class="text-muted">Every diamond in our collection</p>
+        </div>
+        <div class="item">
+            <img src="./images/oval.svg" alt="Oval Diamond" class="img-fluid" />
+            <h3>Oval</h3>
+            <p class="text-muted">Every diamond in our collection</p>
+        </div>
+        <div class="item">
+            <img src="./images/heart.svg" alt="Heart Diamond" class="img-fluid" />
+            <h3>Heart</h3>
+            <p class="text-muted">Every diamond in our collection</p>
+        </div>
+        <div class="item">
+            <img src="./images/asscher.svg" alt="Asscher Diamond" class="img-fluid" />
+            <h3>Asscher</h3>
+            <p class="text-muted">Every diamond in our collection</p>
+        </div>
+    </div>
+    
+      <!-- Keep In Touch Section -->
+      <div class="container-md py-5">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h2>Keep In Touch</h2>
+            <p class="w-75">
+              Our lab-created diamonds are the eco-conscious choice, exhibiting
+              the same sparkle as natural diamonds.
+            </p>
+            <input
+              type="email"
+              class="form-control mb-3"
+              placeholder="Enter your email Id to subscribe"
+              style="border-radius: 0; border-color: #ddd"
+            />
+            <button class="btn btn-dark w-100" style="border-radius: 25px">
+              Sign Up
+            </button>
+          </div>
+          <div class="col-md-6 d-flex flex-wrap gap-3 justify-content-center">
+            <div class="col-6 mb-3">
+              <img
+                src="./images/image1.svg"
+                alt="Keep In Touch"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-6 mb-3">
+              <img
+                src="./images/image2.svg"
+                alt="Keep In Touch"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-6 mb-3">
+              <img
+                src="./images/image3.svg"
+                alt="Keep In Touch"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-6 mb-3">
+              <img
+                src="./images/image4.svg"
+                alt="Keep In Touch"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+        <hr class="my-4" style="border-top: 1px solid #ddd" />
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="bg-footer">
+          <div class="container-md">
+            <div class="text-center">
+              <img src="./images/logo.svg" alt="Logo" class="img-fluid" />
+              <p class="text-danger p-2">20+ Years Of Trust</p>
+            </div>
+            <p class="text-center">
+              dimend SCAASI Jeweler is a unique Jewelry store located in Chicago
+              with an emphasis on great style and exceptional quality.
+            </p>
+            <hr class="my-4" style="border-top: 1px solid #ddd" />
+            <div class="footer-bar d-flex justify-content-center">
+              <a href="#" class="mx-4">Education</a>
+              <a href="#" class="mx-4">About Us</a>
+              <a href="#" class="mx-4">Customer Care</a>
+              <a href="#" class="mx-4">Contact Us</a>
+            </div>
+            <div class="payment-cards d-flex justify-content-center mt-4 p-2">
+              <img src="./images/gia.svg" class="mx-4" alt="" />
+              <img src="./images/jweles.svg" class="mx-4" alt="" />
+              <img src="./images/jvc.svg" class="mx-4" alt="" />
+              <img src="./images/bbb.svg" class="mx-4" alt="" />
+              <img src="./images/master-card.svg" class="mx-4" alt="" />
+              <img src="./images/Discover.svg" class="mx-4" alt="" />
+              <img src="./images/Paypal.svg" class="mx-4" alt="" />
+              <img src="./images/american.svg" class="mx-4" alt="" />
+            </div>
+            <p class="text-center mt-4">
+              dimendSCAASI™ and InnerView® are Registered Trademarks of dimend
+              SCAASI Ltd. © 2010-2020 dimend SCAASI Ltd. Terms Of Use | Sitemap
+              | Privacy Policy
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Scripts -->
+      <script src="app.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </main>
+  </body>
+</html>
+

@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Font Style */
+body {
+  font-family: "Montserrat", sans-serif;
+
+}
+
+/* Container */
+.container {
+  margin-top: 20px;
+  padding: 0 15px;
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa; /* Default background color */
+}
+
+/* Ensure the container takes relative positioning */
+
+.ring-container {
+  position: relative;
+  height: 400px;
+}
+
+.ring {
+  position: absolute;
+}
+
+.ring-left {
+  left: 0;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+}
+
+.ring-center {
+  left: 52%;
+  top: -75%;
+  transform: translate(-50%, 0);
+  width: 500px;
+}
+
+.ring-right {
+  right: 0;
+  top: 30%;
+  transform: translate(50%, -50%);
+  width: 280px;
+}
+
+/* Heading styling */
+
+h1.display-1 {
+  color: #f5f5f5;
+  font-weight: bold;
+  margin-top: 80px;
+ 
+}
+
+.text-muted.opacity-1 {
+  opacity: 0.1;
+}
+.detail {
+  margin-top: -320px;
+}
+
+.icon-round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #929292; /* Facebook blue */
+  border-radius: 50%; /* Make it round */
+  width: 45px; /* Set the width */
+  height: 45px; /* Set the height */
+  transition: background-color 0.3s; /* Add a transition effect */
+}
+
+.icon-round:hover {
+  background-color: #365899; /* Darker blue on hover */
+}
+
+/* Responsive Header Background Colors */
+@media (min-width: 576px) {
+  .header {
+    background-color: #e9ecef; /* Small screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    background-color: #dee2e6; /* Medium screens */
+  }
+}
+
+@media (min-width: 992px) {
+  .header {
+    background-color: #ced4da; /* Large screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    background-color: #adb5bd; /* Extra large screens */
+  }
+}
+
+/* Card Styles */
+.card {
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  color: white;
+}
+
+/* Custom Background Colors */
+.bg-custom-orange {
+  background-color: #f7b79d !important;
+}
+
+.bg-custom-black {
+  background-color: #151515 !important;
+}
+
+.bg-custom-gray {
+  background-color: #929292 !important;
+}
+
+.bg-top-gray {
+  background-color: #e7e7e7 !important;
+  color: #333;
+}
+
+.bg-footer{
+    background-color: #f9f9f9;
+    width: 100%;
+}
+.btn-primary {
+  background: #151515;
+  padding: 10px 70px;
+  border-radius: 50px;
+}
+.card {
+  width: 330px;
+  background-color: white;
+}
+
+.card-diamond{
+    width: 200px;
+}
+.card-diamond p{
+ color: red;
+}
+
+
+/* Custom Text Colors */
+.text-color-black {
+  color: #151515 !important;
+}
+
+/* ******** Slider ******** */
+
+.card-slider {
+  width: 100%;
+}
+
+.card-slider input {
+  display: none;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  perspective: 1000px;
+  overflow: hidden;
+  min-height: 350px;
+}
+
+.testimonials .item {
+  width: 300px;
+  padding: 30px;
+  border-radius: 5px;
+  position: absolute;
+  border: 2px solid black;
+  top: 0;
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.5s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  user-select: none;
+  cursor: pointer;
+}
+
+.testimonials .item p {
+  font-size: 80px;
+  color: white;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dots label {
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: cyan;
+  margin: 7px;
+  transition-duration: 0.2s;
+}
+
+#t-1:checked ~ .dots label[for="t-1"],
+#t-2:checked ~ .dots label[for="t-2"],
+#t-3:checked ~ .dots label[for="t-3"],
+#t-4:checked ~ .dots label[for="t-4"],
+#t-5:checked ~ .dots label[for="t-5"] {
+  transform: scale(2);
+  background-color: #fff;
+  box-shadow: 0px 0px 0px 3px red;
+}
+
+.dots label:not(:checked) {
+  transform: scale(1.5);
+}
+
+#t-1:checked ~ .testimonials .item:nth-child(1),
+#t-2:checked ~ .testimonials .item:nth-child(2),
+#t-3:checked ~ .testimonials .item:nth-child(3),
+#t-4:checked ~ .testimonials .item:nth-child(4),
+#t-5:checked ~ .testimonials .item:nth-child(5) {
+  transform: translate3d(0, 0, 0);
+  z-index: 1;
+}
+
+#t-1:checked ~ .testimonials .item:nth-child(n+2),
+#t-2:checked ~ .testimonials .item:nth-child(n+1):nth-child(-n+3),
+#t-3:checked ~ .testimonials .item:nth-child(n+4),
+#t-4:checked ~ .testimonials .item:nth-child(n+5),
+#t-5:checked ~ .testimonials .item:nth-child(1) {
+  transform: translate3d(-300px, 0, -90px) rotateY(-15deg);
+  z-index: 2;
+}
+
+#t-1:checked ~ .testimonials .item:nth-child(n+3),
+#t-2:checked ~ .testimonials .item:nth-child(n+4),
+#t-3:checked ~ .testimonials .item:nth-child(n+5),
+#t-4:checked ~ .testimonials .item:nth-child(1),
+#t-5:checked ~ .testimonials .item:nth-child(2) {
+  transform: translate3d(-600px, 0, -180px) rotateY(15deg);
+  z-index: 3;
+}
+
+
+
+.diamond-carousel {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 0;
+  }
+  
+  .diamond-card {
+    flex: 0 0 auto;
+    width: 200px;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    scroll-snap-align: center;
+  }
+  
+  .diamond-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+  }
+  
+  .diamond-card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #333;
+  }
+  
+  .diamond-card p {
+    color: #ff6f61;
+    font-size: 0.9rem;
+  }
+  
+  .para-footer{
+    width: 520px;
+  }
+  .footer-bar a{
+    color: gray;
+    text-decoration: none;
+  }
+  .container-cards{
+    width: 1250px;
+    margin: auto;
+    position: relative;
+    top: -130px;
+    margin-top: 180px;
+  }
+
+
+  .ring-container {
+    position: relative;
+  }
+
+  .ring {
+    transition: transform 0.5s ease;
+    cursor: pointer;
+  }
+
+  .ring.active {
+    transform: rotate(360deg) scale(1.5);
+    z-index: 1;
+  }
+
+  /* Center the clicked ring in the container */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(360deg) scale(1.5);
+    z-index: 2;
+  }
+  .detail-item {
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Smooth fade for detail items */
+    display: none; /* Use display none to hide elements */
+}
+
+.detail-item:not(.hidden) {
+    opacity: 1; /* Show details when not hidden */
+    display: block; /* Display when showing */
+}
+
+.display-1{
+    color: #E7E7E7;
+}
+
+.owl-carousel .item {
+  text-align: center;
+  padding: 15px;
+}
+.owl-carousel .item img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.owl-carousel .item h3 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+.owl-carousel .item p {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.navbar-nav .nav-link {
+  color: black !important; /* Ensure text is black */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f7b79d; /* Optional: Change color on hover */
+}
+
+.navbar-toggler-icon {
+  background-color: black; /* Ensure the toggler icon blends with the navbar */
+}
+
+/* ********* */
+
+.main-ring-container {
+  position: relative;
+  text-align: center;
+}
+
+.side-ring {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+}
+
+.side-ring-left {
+  left: 0;
+}
+
+.side-ring-right {
+  right: 0;
+}
+
+.main-ring img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.text-overlay {
+  font-size: 64px;
+  color: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .text-overlay {
+    font-size: 48px;
+  }
+  .side-ring {
+    display: none; /* Hide side rings on smaller screens */
+  }
+  .main-ring img {
+    max-width: 200px;
+  }
+}
+@media (max-width: 576px) {
+  .text-overlay {
+    font-size: 36px;
+  }
+  .main-ring img {
+    max-width: 150px;
+  }
+}
